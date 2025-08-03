@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 42 45% 95%;
+    --foreground: 155 70% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 155 70% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 155 70% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 142 69% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 93% 70%;
+    --secondary-foreground: 155 70% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 42 45% 90%;
+    --muted-foreground: 155 30% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 93% 70%;
+    --accent-foreground: 155 70% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 142 30% 85%;
+    --input: 142 30% 85%;
+    --ring: 142 69% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Garam Masala Brand Colors */
+    --brand-green: 142 69% 45%;
+    --brand-green-dark: 142 69% 35%;
+    --brand-yellow: 45 93% 70%;
+    --brand-yellow-dark: 45 93% 60%;
+    --brand-cream: 42 45% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-green)), hsl(var(--brand-green-dark)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-yellow)), hsl(var(--brand-yellow-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-green) / 0.9), hsl(var(--brand-green-dark) / 0.8));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--brand-green) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--brand-yellow) / 0.4);
+    --shadow-card: 0 4px 20px -2px hsl(var(--brand-green) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
