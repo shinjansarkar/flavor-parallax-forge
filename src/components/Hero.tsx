@@ -45,9 +45,9 @@ const Hero = () => {
             className="text-lg px-8 py-4"
             asChild
           >
-            <a href="tel:6289006267">
+            <a href="tel:6xxxxxx7">
               <Phone className="w-5 h-5" />
-              Order Now: 6289006267
+              Order Now: 6xxxxxx7
             </a>
           </Button>
           <Button

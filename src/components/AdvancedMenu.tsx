@@ -195,7 +195,7 @@ const AdvancedMenu = () => {
             <h3 className="text-3xl font-bold mb-4">Ready to Order?</h3>
             <p className="text-xl mb-6 opacity-90">Call us now for hot, fresh delivery!</p>
             <Button variant="cta" size="lg" className="text-xl px-8 py-4">
-              📞 Call: 6289006267
+              📞 Call: 6xxxxxx7
             </Button>
           </div>
         </div>

@@ -128,7 +128,7 @@ const Navigation = () => {
               <div className="px-4 pb-2">
                 <Button variant="order" className="w-full">
                   <Phone className="w-4 h-4" />
-                  Order Now: 6289006267
+                  Order Now: 6xxxxxx7
                 </Button>
               </div>
             </div>

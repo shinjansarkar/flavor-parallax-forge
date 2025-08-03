@@ -37,7 +37,7 @@ const Contact = () => {
                 Speak directly with our team for personalized service
               </p>
               <div className="text-3xl font-bold text-brand-yellow mb-4">
-                6289006267
+                6xxxxxx7
               </div>
               <Button variant="cta" className="w-full">
                 <Phone className="w-4 h-4" />
@@ -99,7 +99,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="order" size="lg" className="text-xl px-8 py-4">
                 <Phone className="w-6 h-6" />
-                Order Now: 6289006267
+                Order Now: 6xxxxxx7
               </Button>
               <Button
                 variant="outline"
