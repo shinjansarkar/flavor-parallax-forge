@@ -34,7 +34,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className={`p-2 rounded-full transition-all duration-300 ${
-              isScrolled ? 'bg-brand-green' : 'bg-brand-yellow'
+              isScrolled ? 'bg-brand-yellow' : 'bg-brand-yellow'
             }`}>
               <span className="text-2xl">🍴</span>
             </div>
@@ -99,37 +99,49 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-border/10 shadow-card">
-            <div className="py-4 space-y-4">
-              <button 
-                onClick={() => scrollToSection('hero')}
-                className="block w-full text-left px-4 py-2 text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-60 md:hidden">
+            <div className="absolute top-0 left-0 w-full bg-white border-t border-border/10 shadow-card">
+              {/* Close (X) Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="absolute top-4 right-4 text-3xl text-brand-green hover:text-brand-yellow focus:outline-none z-50"
+                aria-label="Close menu"
               >
-                Home
+                <X className="w-8 h-8" />
               </button>
-              <button 
-                onClick={() => scrollToSection('menu')}
-                className="block w-full text-left px-4 py-2 text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
-              >
-                Menu
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left px-4 py-2 text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-4 py-2 text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
-              >
-                Contact
-              </button>
-              <div className="px-4 pb-2">
-                <Button variant="order" className="w-full">
-                  <Phone className="w-4 h-4" />
-                  Order Now: 6xxxxxx7
-                </Button>
+              <div className="pt-16 pb-6 space-y-4">
+                <button 
+                  onClick={() => scrollToSection('hero')}
+                  className="block w-full text-left px-6 py-4 text-lg text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
+                >
+                  Home
+                </button>
+                <button 
+                  onClick={() => scrollToSection('menu')}
+                  className="block w-full text-left px-6 py-4 text-lg text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
+                >
+                  Menu
+                </button>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="block w-full text-left px-6 py-4 text-lg text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="block w-full text-left px-6 py-4 text-lg text-foreground hover:bg-brand-green/10 hover:text-brand-green transition-colors"
+                >
+                  Contact
+                </button>
+                <div className="px-6 pb-2">
+                  <a href="tel:6xxxxxxxxx">
+                    <Button variant="order" className="w-full text-lg py-4">
+                      <Phone className="w-5 h-5" />
+                      Order Now: 6xxxxxxxxx
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
