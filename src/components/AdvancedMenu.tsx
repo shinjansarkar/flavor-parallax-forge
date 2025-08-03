@@ -175,20 +175,11 @@ const AdvancedMenu = () => {
                         </div>
                       )}
 
-                      {/* Price and Add Button */}
+                      {/* Price */}
                       <div className="flex justify-between items-center">
                         <div className="text-2xl font-bold text-brand-green">
                           {item.price}
                         </div>
-                        <Button
-                          variant="order"
-                          size="sm"
-                          onClick={() => addToCart(item.id)}
-                          className="group-hover:shadow-glow"
-                        >
-                          <ShoppingCart className="w-4 h-4" />
-                          Add
-                        </Button>
                       </div>
                     </CardContent>
                   </Card>
@@ -197,16 +188,6 @@ const AdvancedMenu = () => {
             </TabsContent>
           ))}
         </Tabs>
-
-        {/* Floating Cart Button */}
-        {getCartCount() > 0 && (
-          <div className="fixed bottom-6 right-6 z-50 animate-scale-in">
-            <Button variant="cta" size="lg" className="rounded-full shadow-glow">
-              <ShoppingCart className="w-5 h-5" />
-              Cart ({getCartCount()})
-            </Button>
-          </div>
-        )}
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in-up">

@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, MapPin } from "lucide-react";
 
 const Hero = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Parallax Background Elements */}
@@ -36,11 +39,23 @@ const Hero = () => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-          <Button variant="cta" size="lg" className="text-lg px-8 py-4">
-            <Phone className="w-5 h-5" />
-            Order Now: 6289006267
+          <Button
+            variant="cta"
+            size="lg"
+            className="text-lg px-8 py-4"
+            asChild
+          >
+            <a href="tel:6289006267">
+              <Phone className="w-5 h-5" />
+              Order Now: 6289006267
+            </a>
           </Button>
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+          <Button
+            variant="hero"
+            size="lg"
+            className="text-lg px-8 py-4"
+            onClick={() => setShowMenu(true)}
+          >
             View Menu
           </Button>
         </div>
@@ -79,6 +94,26 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white/70 rounded-full animate-pulse mt-2"></div>
         </div>
       </div>
+
+      {/* Modal for Menu Image */}
+      {showMenu && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+          <div className="relative bg-white rounded-xl shadow-lg p-4 w-full max-w-2xl mx-4 md:mx-0">
+            <button
+              className="absolute top-2 right-2 text-gray-700 hover:text-black"
+              onClick={() => setShowMenu(false)}
+              aria-label="Close"
+            >
+              <span className="text-2xl font-bold">&times;</span>
+            </button>
+            <img
+              src="https://i.ibb.co/j92hYG2x/33e0e34e-0871-48f6-98c0-911694f6dd33.jpg"
+              alt="Full Menu"
+              className="rounded-lg w-full h-auto max-h-[80vh] object-contain"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Clock, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Clock, MapPin, MessageCircle, X } from "lucide-react";
 
 const Contact = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <section className="py-20 bg-gradient-brand relative overflow-hidden">
       {/* Background Pattern */}
@@ -98,13 +101,38 @@ const Contact = () => {
                 <Phone className="w-6 h-6" />
                 Order Now: 6289006267
               </Button>
-              <Button variant="outline" size="lg" className="text-xl px-8 py-4 border-brand-green-dark text-brand-green-dark hover:bg-brand-green-dark hover:text-white">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-xl px-8 py-4 border-brand-green-dark text-brand-green-dark hover:bg-brand-green-dark hover:text-white"
+                onClick={() => setShowMenu(true)}
+              >
                 View Full Menu
               </Button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal for Menu Image */}
+      {showMenu && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+          <div className="relative bg-white rounded-xl shadow-lg p-4 w-full max-w-2xl mx-4 md:mx-0">
+            <button
+              className="absolute top-2 right-2 text-gray-700 hover:text-black"
+              onClick={() => setShowMenu(false)}
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <img
+              src="https://i.ibb.co/j92hYG2x/33e0e34e-0871-48f6-98c0-911694f6dd33.jpg"
+              alt="Full Menu"
+              className="rounded-lg w-full h-auto max-h-[80vh] object-contain"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
