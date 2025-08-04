@@ -33,9 +33,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
+            {/* Logo with yellow background and icon */}
             <div className={`p-2 rounded-full transition-all duration-300 ${
               isScrolled ? 'bg-brand-yellow' : 'bg-brand-yellow'
-            }`}>
+            } flex items-center justify-center`}>
+              {/* Fork & Knife emoji or icon */}
               <span className="text-2xl">🍴</span>
             </div>
             <div className={`font-bold transition-colors duration-300 ${

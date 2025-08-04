@@ -20,6 +20,17 @@ const Hero = () => {
       
       {/* Main Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+        {/* Logo Section */}
+        <div className="flex justify-center mb-8 animate-scale-in">
+          <div className="inline-block w-full max-w-[200px] px-6 py-8 sm:px-8 sm:py-8 bg-brand-yellow rounded-full shadow-glow mt-8 sm:mt-0">
+            <div className="flex flex-col items-center">
+              <div className="text-4xl mb-2">🍴</div>
+              <div className="text-brand-green-dark font-bold text-xl sm:text-2xl md:text-3xl text-center">GARAM MASALA</div>
+              <div className="text-brand-green text-base sm:text-lg font-medium text-center">FRESHLY & HOMELY</div>
+            </div>
+          </div>
+        </div>
+
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
           Authentic Indian
